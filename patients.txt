@@ -1,0 +1,3 @@
+1|Thejith|17|male|8374094259|Fever, Cold, Head Ache
+2|Sunny|19|male|9391361159|Gastric Problems
+3|Vani|42|female|9090323412|Knee Pains, Bloating
