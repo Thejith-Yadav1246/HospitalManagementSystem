@@ -1,0 +1,5 @@
+1|Thejith|17|male|8374094259|Fever, Cold, Head Ache
+2|Sunny|19|male|9391361159|Gastric Problems
+3|Vani|42|female|9090323412|Knee Pains, Cold
+4|Manasa|18|female|8686335474|Fever
+5|Pooja|21|female|9052554310|swelling

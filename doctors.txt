@@ -1,0 +1,7 @@
+DOC-001,Dr. Priya,Gastroenterologist,400.0,true
+DOC-002,Dr.Vinay,Neurologist,700.0,false
+DOC-003,Dr.Manish Pandey,Tricologist,350.0,true
+DOC-004,Dr.Ravi,Cardiology,500.0,true
+DOC-005,Dr.Anu,Neurology,400.0,true
+DOC-006,Dr.Rahul,Orthopedics,300.0,true
+
