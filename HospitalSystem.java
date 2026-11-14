@@ -124,7 +124,8 @@ public class HospitalSystem {
         System.out.println("1. Add Doctor");
         System.out.println("2. View All Doctors");
         System.out.println("3. Update Doctor Availability");
-        System.out.println("4. Back to Owner Dashboard");
+        System.out.println("4. Delete Doctor");
+        System.out.println("5. Back to Owner Dashboard");
         System.out.print("Enter choice: ");
 
         String choice = sc.nextLine();
@@ -225,7 +226,29 @@ public class HospitalSystem {
                     System.out.println("Failed to update availability.");
                 }
             }
-            case "4" -> {
+            case "4" ->{
+    System.out.print("Enter Doctor ID to delete: ");
+    String id = sc.nextLine();
+
+    if (!ds.doctorExists(id)) {
+        System.out.println("Doctor not found.");
+    } else {
+        System.out.print("Confirm deletion? (yes/no): ");
+        String confirm = sc.nextLine();
+
+        if (confirm.equalsIgnoreCase("yes")) {
+            if (ds.deleteDoctor(id)) {
+                System.out.println("Doctor deleted successfully.");
+            } else {
+                System.out.println("Doctor deletion failed.");
+            }
+        } else {
+            System.out.println("Deletion cancelled.");
+        }
+    }
+    break;
+}
+            case "5" -> {
                 return;
             }
 
@@ -234,7 +257,6 @@ public class HospitalSystem {
     }
 }
 
-    
 static void registerPatient() {
     System.out.println("\n=== PATIENT REGISTRATION ===");
     int id;

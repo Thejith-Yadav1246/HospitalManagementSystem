@@ -191,4 +191,44 @@ Doctor findDoctor(String id) {
     return null;
 }
 
+
+// Delete doctor method
+boolean deleteDoctor(String id) {
+
+    StringBuilder updatedData = new StringBuilder();
+    boolean found = false;
+
+    try (Scanner reader = new Scanner(file)) {
+
+        while (reader.hasNextLine()) {
+
+            String line = reader.nextLine();
+            String[] parts = line.split(",", -1);
+
+            if (parts.length == 5 && parts[0].equals(id)) {
+                found = true;
+                continue; // Skip the doctor record
+            }
+
+            updatedData.append(line).append(System.lineSeparator());
+        }
+
+    } catch (FileNotFoundException e) {
+        return false;
+    }
+
+    if (!found) {
+        return false;
+    }
+
+    try (FileWriter writer = new FileWriter(file, false)) {
+        writer.write(updatedData.toString());
+        return true;
+
+    } catch (IOException e) {
+        System.out.println("Error deleting doctor record.");
+        return false;
+    }
+}
+
 }
